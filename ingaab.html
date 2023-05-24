@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ingaab</title>
+		<meta charset = 'utf-8' />
+		<meta name = 'viewport' content = 'width=device-width,initial-scale=1.0' />
+		<link rel = 'stylesheet' href = 'fontawesome-free-5.14.0-web/fontawesome-free-5.14.0/css/all.min.css' />
+		<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap" rel="stylesheet">
+		<link href="file:///D:/Tools/fontawesome-free-5.14.0-web/fontawesome-free-5.14.0/css/all.min.css" rel = 'stylesheet' />
+		<style>
+		
+			* { 
+			
+				box-sizing:border-box;
+				font-family:'Tajawal';
+				
+				font-size:18px;
+			}
+			
+			body {
+			
+				direction:rtl;
+				margin:0;
+			}
+			
+			h1 {
+				
+				font-size:60px;
+				text-align:center;
+				font-weight:bolder;
+				
+				display:flex;
+				align-items:center;
+				justify-content:center;
+				
+				background:linear-gradient(to bottom right,#02eec5,#7a41f0);
+				background-clip:text;
+				
+				color:transparent;
+				
+				padding-top:100px;
+			}
+			
+			h1 img {
+			
+				margin:0 10px;
+			}
+			
+			h2 {
+			
+				margin-top:0;
+				padding:15px;
+				text-align:center;
+				
+				font-size:35px;
+			}
+			
+			h2 strong { font-size:35px;}
+			h3 { font-size:30px;text-align:center;position:relative;}
+			h3 * { font-size:30px;}
+			h4 {
+			
+				font-size:25px;
+				display:inline-block;
+				margin-right:25px;
+				padding-right:0;
+				margin-bottom:0;
+				padding-bottom:7.5px;
+			}
+			
+			h4:not(.subhead) { border-bottom:2px solid #000;}
+			
+			h4 * { font-size:25px;}
+			h4:not(.subhead):before {
+			
+				content:'\f292';
+				
+				font-family:'Font Awesome 5 Free';
+				font-weight:bolder;
+				
+				font-size:25px;
+				
+				color:inherit;
+				
+				margin-inline-end:5px;
+			}
+			
+			h3 strong {
+			
+				background:#FFF;
+				
+				display:inline-block;
+				
+				padding:0 25px;
+				
+				position:relative;
+				z-index:1;
+			}
+			
+			h3:before {
+			
+				position:absolute;
+				top:calc(50% - 2.5px);
+				left:10%;
+				width:80%;
+				height:5px;
+				
+				content:'';
+				background:#594f4f;
+			}
+			
+			ol {
+			
+				padding-bottom:100px;
+				margin-right:30px;
+			}
+			
+			p {
+				
+				padding:75px;
+				padding-top:0;
+			}
+			
+			p,ol li {
+			
+				font-size:22px;
+				
+				line-height:50px;
+			}
+			
+			button {
+			
+				margin:10px auto;
+				
+				display:block;
+			
+				cursor:pointer;
+			
+				padding:12px 28px;
+				
+				background:linear-gradient(to top right,#9de0ad,#45ADA8) #45ADA8  0% 0%/100% 100% no-repeat;
+				border:none;
+				
+				color:#FFF;
+			
+				position:relative;
+			
+				transition:all 0.19s ease;
+				
+				overflow:hidden;
+				
+				font-size:20px;
+			}
+			
+			button:hover {
+			
+				padding-right:60px;
+				
+				background-size:100% 0%;
+			}
+			
+			button:hover i { top:0%;}
+			
+			button i {
+			
+				position:absolute;
+				top:100%;
+				right:20px;
+				height:100%;
+				width:25px;
+				
+				display:flex !important;
+				align-items:center;
+				justify-content:center;
+				
+				transition:all 0.19s ease;
+			}
+			
+			body > header {
+			
+				background:url(file://C:/users/loay/Downloads/lauren-mancke-aOC7TSLb1o8-unsplash.jpg) 50% 50%/cover no-repeat;
+			
+				padding:40px 0;
+			
+				position:relative;
+			}
+			
+			.price-tag {
+			
+				position:absolute;
+				top:5px;
+				left:25px;
+				
+				padding:20px 15px;
+				
+				border:5px dashed #000;
+				border-top:none;
+				
+				outline:5px solid #ffd500;
+				
+				background:#ffd500;
+				
+				border-radius:0 0 50px 50px;
+				
+				z-index:5;
+				
+				box-shadow:0 5px 25px #000;
+			}
+			
+			.price-tag .del {
+			
+				position:relative;
+				
+				display:inline-block;
+				
+				color:#000A;
+				
+				font-size:25px;
+			}
+			
+			.price-tag strong {
+			
+				font-size:50px;
+				display:block;
+			}
+			
+			.price-tag .del:after {
+			
+				height:1px;
+				
+				position:absolute;
+				top:calc(50% - 0.5px);
+				left:0;
+				width:100%;
+				
+				background:#000;
+				
+				content:'';
+			}
+			
+			body > header:after {
+			
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				
+				background:#030a0fAA;
+				content:'';
+			}
+			
+			body > header > * {
+			
+				position:relative;
+				z-index:1;
+			}
+			
+			@media(max-width:1200px) {
+				
+				h2 ,h2 *{ font-size:16px !important;}
+				
+				h3:before { width:100%;left:0;}
+				
+				h4 {
+				
+					line-height:50px;
+					padding:15px;
+					padding-right:25px;
+					
+					margin:0;
+				}
+				
+				ol { padding:12.5px;}
+				
+				p { text-align:center;}
+				
+				h1 {
+				
+					font-size:40px;
+					flex-wrap:wrap;
+					justify-content:flex-start;
+					
+					padding-top:0;
+					
+					padding-right:25px;
+				}
+				
+				h1 img {
+				
+					display:block;
+					margin:20px;
+				}
+				
+				.price-tag strong {font-size:30px;}
+				.price-tag .del {font-size:20px;}
+			}
+			
+			/* Video Player */
+			.bw-video {
+			
+				position:relative;
+				width:100%;
+				display:block;
+			}
+			
+			.bw-video video {
+			
+				width:100%;
+				height:100%;
+			}
+			
+			.bw-video .bw-upper-bar {
+			
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:90px;
+				
+				text-indent:25px;
+				
+				font-size:25px;
+				
+				background:#000;
+				color:#fff;
+				
+				opacity:0;
+				
+				transition: opacity 0.25s ease;
+			}
+			
+			.bw-video .bw-bottom-bar {
+			
+				position:absolute;
+				bottom:0;
+				left:0;
+				width:100%;
+				height:50px;
+				
+				display:flex;
+				justify-content:space-between;
+				
+				background:#000;
+				
+				opacity:0;
+				
+				transition: opacity 0.25s ease;
+			}
+			
+			.bw-video:hover .bw-bottom-bar,
+			.bw-video:hover .bw-upper-bar,
+			.bw-video:hover .bw-progress-bar { opacity:1;}
+			
+			.bw-video .bw-bottom-bar button {
+			
+				background:none;
+				color:#FFF;
+				border:none;
+				
+				padding:12.5px 20px;
+				
+				font-size:18px;
+				
+				cursor:pointer;
+			}
+
+			.bw-progress-bar {
+			
+				opacity:0;
+				transition: opacity 0.25s ease;
+			
+				position:absolute;
+				bottom:50px;
+				left:0;
+				width:calc(100% - 2px);
+				
+				
+				appearance:none;
+				
+				background:#000;
+			}
+			
+			.bw-progress-bar::-webkit-slider-thumb {
+			
+				background:#FFF;
+				border:1px solid #000;
+				
+				
+				width:50px;
+				height:50px;
+				
+				border-radius:50px;
+			}
+			
+			.video-bottom-bar-holder { flex-grow:1;}
+			
+			.volume,.volume-bar {
+			
+				display:flex;
+				align-items:center;
+				justify-content:center;
+			}
+			
+			.volume-bar {
+			
+				opacity:0;
+				
+				transition:opacity 0.2s ease-in-out;
+			}
+			
+			.volume-bar input { width:100%;}
+			
+			.volume:hover .volume-bar { opacity:1;}
+			
+			.vid-time { 
+			
+				display:flex;
+				align-items:center;
+				justify-content:space-around;
+				
+				width:100px;
+			
+				color:#FFF;
+			}
+			
+		</style>
+	</head>
+	<body>
+
+		<h2 style = 'background:#594f4f;color:#fff;'>
+			<strong style = 'color:#ff3f3f'>عرض خاص لفترة محدودة!!</strong> خصم 90% على كورس طرق الربح من موقع كانفا Canva  <strong style = 'color:#ff3f3f'>بدون تحقيق الشروط 9$ فقط</strong>
+		</h2>
+		
+		<header>
+			<h1>
+				<img src = 'canva.png' />
+				هل تريد كسب المال من كانفا Canva
+			</h1>
+			<span class = 'price-tag'>
+				<div class = 'del'>
+				$90.00
+				</div>
+				<strong>
+				$9.00
+				</strong>
+			</span>
+		</header>
+		
+		<p>
+		كيف يمكنك تحقيق1000$ الي5000$ دولار شهريا
+ الربح من الانترنت عن طريق موقع كانفا Canva  بدون خبره وبدون راس مال
+الان احصل على كورس الربح من كانفا Canva  بأخر التحديثات
+احجز الان واستفيد بالخصم من دلوقتى لفترة محدودة
+هاتتعلم كل مايخص الربح من موقع كانفا Canva 
+الكورس الأول الذي يضمن لك النجاح والشهرة وتحقيق $1000 دولار شهريا
+
+توقف عن التفكير وابدأ في العمل لتحقيق حلمك الآن 
+
+هل تحلم بأن تمتلك مشروع خاص بك يدر عليك ربح مستمر ولكنك لا تعرف من أين تبدأ؟ هل واجهت صعوبات في إيجاد أفكار، أو كيفية التسويق لمشروعك؟
+مع موقع كانفا Canva، ستكون قادرًا على إنشاء تصميمات جذابة وعالية الجودة في وقت قصير جدًا واحترافية. ستتعلم في دورتنا كيفية استخدام موقع كانفا Canva  من الصفر 100% لإنشاء تصميمات، وطرق التسويق لهذه التصميمات.
+		</p>
+
+		<p>
+		فأنت هنا في المكان الصحيح. لا شيء يبدو أفضل من كسب لقمة العيش من القيام بشيء تحبه وكسب المال أثناء نومك، أليس كذلك؟ خذ طريقة وخطة عملية حققت أرباح 1000 دولار + شهريًا بدخل سلبي (مجهود لمرة واحدة) في عامي الأول في العمل.
+		</p>
+		
+		<h3>
+		<strong>تخيل لو كان بإمكانك</strong>
+		</h3>
+		
+		<ol>
+			<li>
+			اربح المال دون أي جهود لغير لمرة واحدة (دخل سلبي) بينما تستمتع بما تفعل.
+			</li>
+
+			<li>
+			اكسب دخلاً أثناء نومك وأقضي وقتك مع عائلتك وأصدقائك.
+			</li>
+
+			<li>
+			قم بإنشاء دخل إضافي اليك ما ستحصل عليه في دورة الربح من موقع كانفا Canva 
+			</li>
+		</ol>
+		
+		<h3>
+		<strong>على ماذا ستحصل؟</strong>
+		</h3>
+		
+		<h4>
+		دورة شاملة كاملة
+		</h4>
+		<p>
+		دورة مفصلة كاملة تغطي كل ما تحتاج لمعرفته حول الربح من موقع  كانفا Canva. تعرف على كيفية العثور على المنتجات المربحة وتصميمها وإعداد قوائمك للبيع وتسويقها وغير ذلك الكثير.
+		</p>
+		
+		<h4>
+		جميع التحديثات المستقبلية مجانًا
+		</h4>
+		<p>
+		سيتم تحديث هذه الدورة بشكل مستمر بدروس وتجارب جديدة. ستحصل على إمكانية الوصول مدى الحياة بالإضافة إلى جميع التحديثات مجانًا حتى تتمكن دائمًا من تحديث أفكارك باستمرار والاستمرار في النمو.
+		</p>
+		
+		<h4>
+		دروس التصميم خطوة بخطوة
+		</h4>
+		<p>
+		احصل على دروس تعليمية عن التصميم خطوة بخطوة ستعرف الطرق المختلفة لتصميم قوالب  كانفا Canva. ليست هناك حاجة إلى مهارات تصميم، والصبر والممارسة هو كل ما تحتاجه للربح من تصميم كانفا Canva ناجح.
+		</p>
+		
+		<h3>
+		<strong>لمن هذا؟</strong>
+		</h3>
+		
+		<p>
+أي شخص مبتدئ أو لديه مهارات كانفا Canva الأساسية يتطلع إلى تحسينها واستخدامها لبدء مشروع ناجح عبر الإنترنت.
+
+عشاق كانفا Canva الذين يبحثون عن طرق لاستثمار مهاراتهم في كانفا Canva وتحقيق دخل كامل / إضافي مع  كانفا Canva.
+
+
+موظف بدوام كامل يبحث عن دخل إضافي أو الحرية المالية للعمل الحر دون تقيد بمواعيد عامل ثابتة.
+		</p>
+		
+		<h3>
+		<strong>اليك ما ستحصل عليه في دورة<hr />
+الربح من موقع كانفا Canva</strong>
+		</h3>
+		
+		<h4>
+		مقدمة: البدء
+		</h4>
+		<p>تعرف على نظرة عامة حول ما ستتعلمه في هذه الدورة ولماذا يعتبر كانفا Canva أداة مهمة لجميع أصحاب الأعمال. بالإضافة إلى ذلك، ستحصل على فكرة أفضل عن سبب تفضيل الأشخاص للشراء منك مقابل استخدام القوالب المجانية.</p>
+
+		<h4>
+		الوحدة 1: بدء متجر قوالب كانفا Canva ناجح
+		</h4>
+		<p>
+تعرف على كيفية العثور على أماكن التي يمكنك من خلالها تحقبق أرباحك المتوقعة، وتحديد جمهورك المستهدف، وكيفية استخدام اتجاهات eRank وAlura وEtsy وGoogle للعثور على منتجات مربحة. 		
+		</p>
+		
+		<h4>
+		الوحدة 2: دروس تصميم كانفا Canva لمنتجات مختلفة
+		</h4>
+		<p>
+تعرف على كيفية تصميم كتاب إلكتروني / مصنف، وقوالب وسائط اجتماعية، وشعارات، وتوقيع بريد إلكتروني، ودعوات زفاف، ومواد مطبوعة. بالإضافة إلى ذلك، تعرف على كيفية اختيار الألوان والخطوط المناسبة للقوالب الخاصة بك.		
+		</p>
+		
+		<h4>
+		الوحدة 3: قم بإعداد نماذج كانفا Canva الخاصة بك للبيع
+		</h4>
+		<p>
+تعرف على كيفية تحضير القوالب الخاصة بك للبيع، وكيفية إنشاء قوائم جميلة باستخدام  كانفا Canva، وكيفية تسعير القوالب الخاصة بك، وكيفية كتابة وصف المنتج.	
+		</p>
+		
+		<h4>
+		الوحدة 4: البيع في السوق الإبداعي
+		</h4>
+		<p>
+قم بإعداد متجر في Creative market وتعرف على كيفية استخدام علامات Creative Market لجذب حركة المرور إلى متجرك. بالإضافة إلى ذلك، تعرف على كيفية تحميل منتجاتك، واستخدام لوحة القيادة وكيفية تحقيق الربح.		
+		</p>
+		
+		<h4>
+		الوحدة 5: البيع على Etsy.
+		</h4>
+		<p>
+تعرف على كيفية إنشاء متجر على Etsy، وفهم Etsy SEO، وكيفية العثور على الكلمات الرئيسية باستخدام المواقع المتخصصة، وكيفية العثور على العلامات الصحيحة، وكيفية تحسين قوائمك وكيفية تحميل منتجاتك.		
+		</p>
+		
+		<h4>
+		الوحدة 6: البيع على موقع الويب الخاص بك
+		</h4>
+		<p>
+		موارد لمساعدتك في اختيار نظام أساسي لبدء موقع الويب الخاص بك بالإضافة إلى نصائح حول كيفية زيادة حركة المرور إلى متجرك.
+		</p>
+		
+		<h4>
+		الوحدة 7: استخدم Pinterest لدفع حركة المرور إلى متجرك
+		</h4>
+		<p>
+تعرف على كيفية إعداد حساب أعمال Pinterest، وكيفية تنشيط الدبابيس الغنية، وكيفية تحسين Pinterest SEO، ومكان وضع الكلمات الرئيسية وأفكار المحتوى لأي متجر.		
+		</p>
+		
+		<h3>
+		<strong>هل هناك مكافآت؟<hr />
+بالطبع هناك!</strong>
+		</h3>
+		
+		<h4>
+تعلم كيف يمكنك كتابة وصف للمنتجات
+		</h4>
+		<p>
+تعلم كيف يمكنك كتابة وصف للمنتجات بحيث تأسر انتباه الزبون المحتمل وتجعله يفكر حقاً في اقتنائها، تعلم كيف تنسج من الكلمات والعبارات وصفاً جذاباً وشفافاً يقود زبونك بفضوله إلى الشراء.
+		</p>
+		<p>
+احصل على نماذج جاهزة لوصف المنتج التي ستوفر عليك الوقت والجهد في كتابة وصف خاص بك. ما عليك سوى فهم كيفية بنائها، وتخصيصها لتناسب منتجاتك، وسيكون لديك وصف كامل جاهز في دقائق.
+		</p>
+		
+		<h4>
+تحديثات وإضافات مستقبلية مجانية
+		</h4>
+		<p>
+بعد التسجيل، سيكون لديك وصول غير محدود مدى الحياة إلى الدورة، عبر  جميع الأجهزة التي تمتلكها، بالإضافة إلى جميع التحديثات والإضافات المستقبلية مجانًا. سيتم تحديث الدورة باستمرار.
+		</p>
+		
+		<h4>
+الوصول المجاني إلى مجموعة المجتمع الخاص والدعم
+		</h4>
+		<p>
+احصل على الوصول إلى الدردشة والمناقشات في مجتمعنا. تواصل مع الأشخاص الذين يشاركونك نفس الاهتمامات والأهداف.
+		</p>
+		
+		<h4 class = 'subhead'>
+احصل على موقعك الخاص بسعر مخفض 50$ بدل من 150$
+		</h4>
+		<br />
+		<h4 class = 'subhead'>
+احصل على اشترك لمدة سنة كانفا Canva Pro بسعر مخفض بـ 10$ فقط بدل من $119.99
+		</h4>
+		
+		<h3>
+<strong>سؤال & جواب</strong>
+		</h3>
+		
+		<h4>
+كيف يمكنني الربح من موقع  كانفا Canva ؟
+		</h4>
+		
+		<p>
+كانفا  كانفا Canva    كانفا Canva هي أداة تصميم جرافيكي على الإنترنت شائعة تتيح لك إنشاء تصاميم رائعة لأغراض مختلفة، بما في ذلك المنشورات على وسائل التواصل الاجتماعي والمواد التسويقية وغيرها. يمكنك الربح من كانفا Canva عن طريق إنشاء التصاميم وبيعها على الإنترنت، أو باستخدام كانفا Canva لإنشاء تصاميم لعملك الخاص وتوليد المزيد من الإيرادات.		
+		</p>
+		
+		<h4>
+كيف اشترك في الدورة؟
+		</h4>
+		<p>
+اضغط علي زر الاشتراك واتمام عملية الدفع.
+		</p>
+		
+		<button><i class = 'fas fa-shopping-cart'></i> الأشتراك الأن</button>
+		
+		<h4>
+هل أحتاج إلى كانفا Canva Pro للبدء؟
+		</h4>
+		<p>
+لا، لست بحاجة إلى كانفا Canva Pro لبيع تصميماتك  على  كانفا Canva. ومع ذلك، أوصيك بالترقية في النهاية لأنها تأتي مع الكثير من الامتيازات التي ستساعد في رفع تصميماتك.		
+		</p>
+		
+		<h4>
+هل يمكنني الحصول على استرداد أموالي؟
+		</h4>
+		<p>
+نظرًا لكونها منتجًا رقميًا، لا يوجد استرداد أموال. إذا كنت غير راضٍ بأي طريقة، يرجى مراسلتنا عبر البريد الإلكتروني (.....) وسنحل المشكلة. ومع ذلك، نحن على ثقة تامة بأنك ستحب هذه الدورة وستتعلم الكثير.		
+		</p>
+		
+		<h4>
+هل هناك متطلبات أساسية لهذه الدورة؟
+		</h4>
+		<p>
+يوصى بأن يكون لديك معرفة أساسية بكيفية عمل كانفا Canva، ومع ذلك هناك قسم كامل عن أساسيات التعامل مع كانفا Canva، وعن كيفية تصميم منتجات معينة، لذا إذا قمت بمتابعة الدروس ستحصل على فكرة عامة.		
+		</p>
+		
+		<h4>
+هل يجب أن يكون لدي مهارات تقنية عالية لأخذ هذه الدورة؟
+		</h4>
+		<p>
+لا، لا يلزم ذلك. هذه الدورة سهلة جدًا في الاستخدام والتنقل خلالها. بالإضافة إلى ذلك، ستساعدك جميع البرامج التعليمية في الدورة على التحرك خطوة بخطوة في التعامل مع الجانب التقني. إذا كنت بحاجة إلى أي مساعدة إضافية، يمكنك دائمًا طرح أسئلتك في مجموعتنا.		
+		</p>
+		
+		<h4>
+من يمكنني الاتصال به للحصول على أسئلة إضافية؟
+		</h4>
+		<p>
+لأي أسئلة إضافية أو طلبات، يرجى الاتصال بنا على البريد الإلكتروني (...)  وسنرد عليك خلال 24-48 ساعة.		
+		</p>
+		
+		<h4>
+هل يمكني الاستفادة من العرض والاشتراك الآن ثم التنفيذ لاحقًا؟
+		</h4>
+		<p>
+نعم، يمكنك اختيار وقت بدء التنفيذ الذي يناسبك.
+		</p>
+		
+		<h4>
+ما الذي أحتاجه لكي ابدأ وهل هناك أي شروط؟
+		</h4>
+		<p>
+كل ما تحتاجة هو يكون لديك جهاز كمبيوتر متصل بالانترنت، و أن تأخذ الأمر بالاهتمام و الجديدة اللازمة حتي تصل الي النجاح المنشود باذن الله.		
+		</p>
+		
+		<p>
+مثل هذه الفرص لا تتكرر كثيرأ أن تحصل على برنامج تدريبي بسعر منخفض جدا، ويعطيك استراتيجات تدر عليك ربح شهري مستمر و متنامي دون الحاجة للعمل بشكل يومي و معتمدًا علي مدى فهمك لهذا الكورس فلا تفوت هذه الفرصة فهي متاحة فقط لـ 100 شخص! بادر بالاشتراك الآن.
+		</p>
+
+		<button><i class = 'fas fa-shopping-cart'></i> الأشتراك الأن</button>
+
+		<!-- <div class = 'bw-video'>
+			
+			<section class = 'bw-upper-bar'>
+				<h3>
+					Title of The Video
+				</h3>
+			</section>
+			
+			<div class = 'bw-loading'></div>
+			
+			<video>
+				<source src = 'Rocket Lift Off.mp4' type="video/mp4"/>
+			</video>
+			
+			<input type = 'range' class = 'bw-progress-bar' />
+			<section class = 'bw-bottom-bar'>
+				<button class = 'pause-play-btn'>
+					<i class = 'fas fa-play'></i>
+				</button>
+				<button class = 'stop-btn'>
+					<i class = 'fas fa-stop'></i>
+				</button>
+				<section class = 'vid-time'>
+					<span class = 'current-time'>
+					00:00
+					</span>
+					/
+					<span class = 'total-time'>
+					15:00
+					</span>
+				</section>
+				<section class = 'volume'>
+					<button class = 'volume-btn'>
+						<i class = 'fas fa-volume-up'></i>
+					</button>
+					<div class = 'volume-bar'>
+						<input type = 'range' id = 'bw-volume-range' min = '0' max = '1' step = '0.01'/>
+					</div>
+				</section>
+				<span class = 'video-bottom-bar-holder'></span>
+				<button class = 'subtitles-btn'>
+					<i class = 'fas fa-file-alt'></i>
+				</button>
+			</section>
+		</div> -->
+
+		<script src = 'jquery.js'></script>
+		<script>
+		(function($) {
+		
+		/* Video Player */
+		$player = $(".bw-video video");
+		$seeker = $(".bw-video input[type='range'].bw-progress-bar");
+		$curr = $('.current-time');
+		$vol = $('.volume input');
+		
+		let last_volume = 0;
+		
+		//On Load.
+		$player[0].addEventListener('loadeddata',() => {
+		
+			//Set Duration
+			let total = $player[0].duration;
+			const minutes = Math.floor(total / 60);
+			total = (minutes < 10 ? '0':'') + minutes +':'+ (total % 60 < 10 ? '0':'') + (total % 60);
+		
+			$(".bw-video .total-time").text(total);
+			
+			//Adjust Seeker.
+			$seeker.attr('max',$player[0].duration);
+			$seeker.val(0);
+		});
+		
+		//On Videos Is Playing.
+		$player[0].addEventListener('timeupdate',function(e) {
+		
+			$seeker.val(this.currentTime);
+			
+			const minutes = Math.floor(this.currentTime / 60);
+			const seconds = Math.floor((this.currentTime - (minutes * 60)) % 60);
+			$curr.text((minutes < 10 ? '0':'') + minutes +':'+ (seconds < 10 ? '0':'') + seconds );
+		});
+		
+		
+		
+		//Volume.
+		$vol.on('input',({currentTarget}) => {
+		
+			$player[0].volume = currentTarget.value;
+			
+			
+		});
+		
+		//Volume Change.
+		$player[0].addEventListener('volumechange',function(e) {
+			
+			$vol.val(this.volume);
+			
+			if( this.volume == 0 ) {
+			
+				$(".volume-btn").find('i').addClass('fa-volume-mute').removeClass('fa-volume-up');
+			}else {
+			
+				$(".volume-btn").find('i').addClass('fa-volume-up').removeClass('fa-volume-mute');
+			}
+		});
+		
+		//Mute/UnMute.
+		$(".volume-btn").click(({currentTarget}) => {
+		
+			$(currentTarget).find('i').toggleClass('fa-volume-up fa-volume-mute');
+			
+			last_volume = $player[0].volume == 0 ? last_volume:$player[0].volume;
+			
+			$player[0].volume = $player[0].volume == 0 ? last_volume:0;
+		});
+		
+		//On Seeker's Seek.
+		$seeker.on('input.bw-progress-bar',(e) => {
+		
+			const val = e.currentTarget.value;
+			const was_playing = $player[0].paused == false;
+			
+			$player[0].pause();
+			
+			$player[0].currentTime = val;
+			
+			if( was_playing )
+				$player[0].play();
+		});
+		
+		//Play/Pause.
+		$(".pause-play-btn").click(({currentTarget}) => {
+		
+			$ele = $(currentTarget);
+			
+			$ele.find('i').toggleClass('fa-play fa-pause');
+			
+			$player[0].paused == true ? $player[0].play():$player[0].pause();	
+		});
+		
+		//Stop.
+		$(".stop-btn").click(() => {
+		
+			$player[0].pause();
+			
+			$player[0].currentTime = 0;
+			
+			$(".pause-play-btn i").addClass('fa-play').removeClass('fa-pause');
+		});
+		
+		})(jQuery);
+		</script>
+	</body>
+</html>
